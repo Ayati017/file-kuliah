@@ -1,0 +1,22 @@
+<?php
+if(isset($_POST['kirim'])){
+echo 'Nama Lengkap: '.$_POST['nama'].'<br/>';
+echo 'Alamat: '.$_POST['alamat'].'<br/>';
+echo 'Tempat Lahir: '.$_POST['tl'].'<br/>';
+echo 'Tanggal Lahir: '.$_POST['tgll'].'<br/>';
+echo 'jenis Kelamin: '.$_POST['jk'].'<br/>';
+echo 'Status: '.$_POST['status'].'<br/>';
+}else{
+echo 'Tidak ada aksi klik pada tombol form<br/>';
+}
+  
+?>
+
+$nama = $_POST["nama"];
+$hobi = $_POST["hobi"];
+echo "<p>Hobi yang Anda pilih:</p>";
+foreach ($hobi as $nilai) {
+echo "- $nilai <br />";
+}
+$namafile = $_FILES['gambar']['name'];
+$move = move_uploaded_file($_FILES['gambar']['tmp_name'], 'gambar/'.$namafile);
